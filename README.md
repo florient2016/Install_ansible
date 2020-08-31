@@ -95,6 +95,9 @@ become_ask_pass = False
 [FileServer]
 192.168.3.42
 ```
-
+### Test ansible file
+```
+ansible -i inventory --list-hosts
+```
 
 
