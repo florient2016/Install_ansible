@@ -77,7 +77,24 @@ become_method = sudo
 become_user = root
 become_ask_pass = False
 ```
-- become : 
+- become : indicates if you want to automaticaly switch to the become_user
+- become_method: set how to become the other user
+- become_user: specified the remote user
+- become_ask_pass: set if a password should be asked for when escalating
+
+### Inventory file location
+- Alternative inventory file can be specified through the ansible.cfg configuration file
+- It is commaon pratice to put the inventory file in the current project directory
+- the inventory file can also be specified on other location, but mention the path on ansible,cfg file
+```
+[inventory]
+127.0.0.1
+192.168.3.45
+[Web]
+192.168.3.40
+[FileServer]
+192.168.3.42
+```
 
 
 
