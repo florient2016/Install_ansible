@@ -51,5 +51,33 @@ ansible --version
 ```
 ### setup ansible configuration file
 #### inventory file location
+inventory is specified on ansible.cfg configuration file
+if configuration is not setup 
+you can create ansible.cfg on /etc/ansible/ repository
+```
+touch /etc/ansible/ansible.cfg
+```
+setting in ansible.cfg are organize in two section
+1. fist section
+```
+[defaults]
+inventory=/etc/myhost.txt
+remote_user= root
+host_key_checking=false
+```
+- defaults : set default setting
+- inventory: specifies the path to the inventory file
+- remote_user: is the name of the user that logs in on the remote hosts
+- host_key_checking: specified whether or not to prompt for a password 
+2. second section
+```
+[privilege_escalation]
+become = True
+become_method = sudo
+become_user = root
+become_ask_pass = False
+```
+- become : 
+
 
 
